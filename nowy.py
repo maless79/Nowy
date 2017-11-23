@@ -1,7 +1,5 @@
-
-def silnia(liczba):
-    wyliczenie =1
-    mnoznik =1
+def silnia(liczba=1):
+    wyliczenie,mnoznik =1,1
     while mnoznik<=liczba:
         wyliczenie= wyliczenie*mnoznik
         mnoznik+=1
