@@ -1,24 +1,24 @@
 import re
-import os
+import sys
+
 try:
-    file = open("C:/L20171109.log")
+    file = open("D:\CSMM\L20171109.log")
     filename=file.name
     text = file.read()
     file.close()
 except IOError:
-    print ("Brak pliku!!!!")
-
-print("Pobrany plik nazywa się %s:" %filename)
+    sys.exit("Brak pliku!!!!")
+filename=filename.split("\\")
+print("Pobrany plik nazywa się: %s" %(filename[len(filename)-1]))
 print("Wczytany plik zawiera %d znaków." % len(text))
 numerator,line_amount, line_digits, digits, input_liness_long, occurings=1,0,0,0,0,0
 input_text=str(input('Wprowadź szukane słowo:'))
-print("Wprowadziłeś słowo: %s" %input_text)
+print("Wprowadziłeś słowo to: %s" %input_text)
 input_liness_long=int(input('Wprowadź długość szukanej linii:'))
 for line in (text.split("\n")):
     line_digits=re.search("[0-9]", line)
     liness_long = len(line)
     occurings=occurings+line.count(input_text)
-    #print("Linia %s, zawiera %s znaków" % (numerator, liness_long))
     if occurings>0:
         line_amount+=1
     if line_digits is not None:
