@@ -2,13 +2,14 @@
 import re
 import sys
 import codecs
-code ="utf-8"
+code="utf-8"
 try:
     typed_input=str(input("Wprowadź ścieżkę do pliku (np.: c:\Windows\):"))
     typed_file_name=input("Wprowadź nazwę pliku (np.: plik.txt):")
     print("Wprowadzona ścieżka do pliku to %s." %(typed_input+typed_file_name))
     file = codecs.open((typed_input+typed_file_name),"r",encoding=code)
-    filename=str(file.name)
+    filename=file.name
+    print(filename)
     text = file.read()
     file.close()
 except IOError:
