@@ -5,3 +5,4 @@ tekst=tekst.split("\n")
 tekst.append("//DUPA//")
 print (tekst)
 
+
