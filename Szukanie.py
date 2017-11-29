@@ -1,16 +1,21 @@
+#-*-coding: utf-8-*-
 import re
 import sys
-
+import codecs
+code ="utf-8"
 try:
-    file = open("D:\CSMM\L20171109.log")
-    filename=file.name
+    typed_input=str(input("Wprowadź ścieżkę do pliku (np.: c:\Windows\):"))
+    typed_file_name=input("Wprowadź nazwę pliku (np.: plik.txt):")
+    print("Wprowadzona ścieżka do pliku to %s." %(typed_input+typed_file_name))
+    file = codecs.open((typed_input+typed_file_name),"r",encoding=code)
+    filename=str(file.name)
     text = file.read()
     file.close()
 except IOError:
     sys.exit("Brak pliku!!!!")
-filename=filename.split("\\")
+filename=filename.split('\\')
 print("Pobrany plik nazywa się: %s" %(filename[len(filename)-1]))
-print("Wczytany plik zawiera %d znaków." % len(text))
+print("Wczytany plik zawiera %d znaków." %len(text))
 numerator,line_amount, line_digits, digits, input_liness_long, occurings=1,0,0,0,0,0
 input_text=str(input('Wprowadź szukane słowo:'))
 print("Wprowadziłeś słowo to: %s" %input_text)
