@@ -1,17 +1,17 @@
+def cechy_postaci(rcpkzmas):
+    import random
 
+    rcpkzmas={
+        "refleks":random.randint(1,10),
+        "cialo":random.randint(1,10),
+        "psychika":random.randint(1,10),
+        "koordynacja":random.randint(1,10),
+        "zmysly":random.randint(1,10),
+        "akcja":random.randint(1,10),
+        "sterowanie":random.randint(1,10),
+    }
+    return rcpkzmas
 
-
-def cechy_postaci(refleks=1,cialo=1):
-    nadmiar=0
-    if refleks>10:
-        nadmiar=nadmiar+(refleks-10)
-        refleks=10
-    if cialo>10:
-        nadmiar=nadmiar+(cialo-10)
-        cialo=10
-
-    return(refleks,cialo,nadmiar)
-
-
-print(cechy_postaci(12,15))
+rcpkzmas={}
+print(cechy_postaci(rcpkzmas))
 
