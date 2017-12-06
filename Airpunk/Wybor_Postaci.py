@@ -10,7 +10,7 @@ while(sprawdzacz<=1):
     #if re.match("[1-3]{1}",rasa_postaci) is not None: # regex sprawdzający czy wpisane cyfry to 1,2,3
     if Walidatory.walidacja(rasa_postaci) is not None:  # regex sprawdzający czy wpisane cyfry to 1,2,3
         try:
-            print("Wybrałeś %s" %rasy[int(rasa_postaci)-1])
+            print("\n Wybrałeś: %s! \n" %rasy[int(rasa_postaci)-1])
             sprawdzacz=2 # zamknięcie pętli jeśli poprawnie wybrano rasę
         except IndexError:
             print("Nie wybrałeś liczby z zakresu 1-3.")
@@ -27,5 +27,5 @@ elif rasa_postaci=="3":
     cechy_wszystkie=Airpunk_Cechy.cechy_postaci(0,0)
     print(cechy_wszystkie)
 
-print("EXIT")
+print("\n EXIT")
 

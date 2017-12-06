@@ -1,8 +1,8 @@
 import re
 
-def walidacja (do_walidacji=3, rasa=1):
+def walidacja (do_walidacji=0, rasa=0):
 
-    sprawdzanie=re.match("[5-9]{1}",str(do_walidacji))
+    sprawdzanie=re.match("[1-3]{1}",str(do_walidacji))
 
     #([1-3]{1}, do_walidacji)
     if sprawdzanie is not None:
