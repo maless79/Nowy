@@ -1,16 +1,18 @@
-import re
+def walidacja(rasa_cecha12_wartosc=[0,0,0]):
+# parametrami jest lista: 0 - rasa 0,1,2 1- czy sprawdzamy cechę12 2 - wartość cechy po zwrocie
+    import re
 
-def walidacja (do_walidacji=0, rasa=0):
+    sprawdzanie=re.match("[0-2]{1}",str(rasa_cecha12_wartosc[0])) # sprawdzenie czy rasa jest wybrana poprawnie 0,1,2
 
-    sprawdzanie=re.match("[1-3]{1}",str(do_walidacji))
-
-    #([1-3]{1}, do_walidacji)
     if sprawdzanie is not None:
-        do_walidacji
+        zwrot=rasa_cecha12_wartosc[0]  # jeżeli rasa jest ok to zwracamy nr rasy
     else:
-        do_walidacji=None
-    return do_walidacji
+        zwrot=None
 
+    if rasa_cecha12_wartosc[1]==1 and zwrot is not None: # jeżeli rasa była okay to można sprawdzać dalej cechę12
+        if (rasa_cecha12_wartosc[2]) >=1 and (rasa_cecha12_wartosc[2])<=12:
+            zwrot=rasa_cecha12_wartosc[2] # jeżeli cecha się mieści to zwracamy jej wartość
+        else:
+            zwrot=None # jeżeli cecha się nie mieści to zwracamy None
 
-z=walidacja()
-print (z)
+    return zwrot
