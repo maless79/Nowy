@@ -12,7 +12,7 @@ def cechy_postaci(rasa=0):
         "akcja":random.randint(1, 10),
         "sterowanie":random.randint(1, 10),
     }
-
+ 
     if rasa==0:
         rcpkzmas["mechanika"] =Walidatory.walidacja([rasa, 1, random.randint(1, 12)])
     elif rasa==1:
