@@ -12,7 +12,6 @@ def cechy_postaci(rasa=0):
         "akcja":random.randint(1, 10),
         "sterowanie":random.randint(1, 10),
     }
- 
     if rasa==0:
         rcpkzmas["mechanika"] =Walidatory.walidacja([rasa, 1, random.randint(1, 12)])
     elif rasa==1:
@@ -30,7 +29,13 @@ def cechy_postaci(rasa=0):
             "akcja":0,
             "sterowanie":0,
         }
-    return rcpkzmas
+
+    wynik={
+        "Suma PH":sum(rcpkzmas.values())
+        }
+    wynik.update(rcpkzmas)
+
+    return wynik
 
 
 
