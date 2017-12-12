@@ -18,7 +18,6 @@ while(sprawdzacz<=1):
 
 if rasa_postaci==0:
     print(Airpunk_Cechy.cechy_postaci(0))
-
 elif rasa_postaci==1:
     print(Airpunk_Cechy.cechy_postaci(1))
 elif rasa_postaci==2:
