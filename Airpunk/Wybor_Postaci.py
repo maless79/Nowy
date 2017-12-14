@@ -1,5 +1,5 @@
 #-*-coding: utf-8-*-
-
+import Logi
 import Airpunk_Cechy
 import Walidatory
 sprawdzacz=0
@@ -9,20 +9,19 @@ while(sprawdzacz<=1):
     # input z informacją o tym w jaki sposób wybrać rasy,ze zdefiniowanej listy "rasy"
     if Walidatory.walidacja([rasa_postaci,0,0]) is not None:  # regex sprawdzający czy wpisane cyfry to 1,2,3
         try:
-            print("\n Wybrałeś: %s! \n" %rasy[int(rasa_postaci)])
+            Logi.logowanie_zdarzen("\n Wybrałeś: %s! \n" %rasy[int(rasa_postaci)])
             sprawdzacz=2 # zamknięcie pętli jeśli poprawnie wybrano rasę
         except IndexError:
-            print("Nie wybrałeś liczby z zakresu 1-3.")
+            Logi.logowanie_zdarzen("Nie wybrałeś liczby z zakresu 1-3.")
     else:
-        print("Wpisałeś niedozwolony znak.")
-
+        Logi.logowanie_zdarzen("Wpisałeś niedozwolony znak.")
 if rasa_postaci==0:
-    print(Airpunk_Cechy.cechy_postaci(0))
+    Logi.logowanie_zdarzen(Airpunk_Cechy.cechy_postaci(0))
 elif rasa_postaci==1:
     print(Airpunk_Cechy.cechy_postaci(1))
 elif rasa_postaci==2:
     print(Airpunk_Cechy.cechy_postaci(2))
 else:
-    print("Nieoczekiwany błąd rasy. Prawdopodobnie źle wybrano rasę postaci.")
-print("\n EXIT")
+    Logi.logowanie_zdarzen("Nieoczekiwany błąd rasy. Prawdopodobnie źle wybrano rasę postaci.")
+Logi.logowanie_zdarzen("\n EXIT")
 

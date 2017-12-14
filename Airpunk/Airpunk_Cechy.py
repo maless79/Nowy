@@ -36,7 +36,6 @@ def cechy_postaci(rasa=0):
             "Suma PH":sum(rcpkzmas.values())
             }
         wynik.update(rcpkzmas)
-        i = int(wynik["Suma PH"])
     return wynik
 
 
