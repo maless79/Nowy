@@ -14,13 +14,13 @@ while(sprawdzacz<=1):
         except IndexError:
             Logi.logowanie_zdarzen("Nie wybrałeś liczby z zakresu 1-3.")
     else:
-        Logi.logowanie_zdarzen("Wpisałeś niedozwolony znak.")
+        Logi.logowanie_zdarzen("Wpisałeś niedozwolony znak.  \n")
 if rasa_postaci==0:
     Logi.logowanie_zdarzen(Airpunk_Cechy.cechy_postaci(0))
 elif rasa_postaci==1:
-    print(Airpunk_Cechy.cechy_postaci(1))
+    Logi.logowanie_zdarzen(Airpunk_Cechy.cechy_postaci(1))
 elif rasa_postaci==2:
-    print(Airpunk_Cechy.cechy_postaci(2))
+    Logi.logowanie_zdarzen(Airpunk_Cechy.cechy_postaci(2))
 else:
     Logi.logowanie_zdarzen("Nieoczekiwany błąd rasy. Prawdopodobnie źle wybrano rasę postaci.")
 Logi.logowanie_zdarzen("\n EXIT")
