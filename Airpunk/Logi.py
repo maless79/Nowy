@@ -12,4 +12,3 @@ def logowanie_zdarzen(do_logu=""):
     airpunklog.close()
     print(do_logu)
     return ("Zapisałem i wyprintowałem")
-
