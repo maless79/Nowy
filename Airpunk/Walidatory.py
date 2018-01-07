@@ -16,7 +16,7 @@ def walidacja(rasa_cecha12_wartosc=[0,0,0,0]):
             zwrot=None #jeżeli cecha się nie mieści to zwracamy None
 
     if rasa_cecha12_wartosc[2]==1 and zwrot is not None: # jeżeli rasa była okay to można sprawdzać dalej cechę10
-        if (rasa_cecha12_wartosc[2]) >=1 and (rasa_cecha12_wartosc[2])<=10:
+        if (rasa_cecha12_wartosc[3]) >=1 and (rasa_cecha12_wartosc[3])<=10:
             zwrot=rasa_cecha12_wartosc[3] # jeżeli cecha się mieści to zwracamy jej wartość
         else:
             zwrot=None #jeżeli cecha się nie mieści to zwracamy None

@@ -17,8 +17,10 @@ def cechy_postaci(rasa=0):
             "sterowanie": 0,
         }
         for cecha, wartosc in rcpkzmas.items():
-            wartosc = int(input("Wprowadz wartosc %s: " % cecha))
+            wartosc = Walidatory.walidacja([rasa,0,1,int(input("Wprowadz wartosc %s: " % cecha))])
             rcpkzmas[cecha]=wartosc
+#  DOPISAC ZABEZPIECZENIE PRZED BLEDEM  WALIDACJI
+
         wynik = {  #  przygotowuje to co zwraca  funkcja cechy_postaci
             "Suma PH":sum(rcpkzmas.values())  # pierwsza  pozycja  slownika wynik jest suma
         }
