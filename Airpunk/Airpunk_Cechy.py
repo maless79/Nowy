@@ -18,6 +18,10 @@ def cechy_postaci(rasa=0):
         }
         for cecha, wartosc in rcpkzmas.items():
             wartosc = Walidatory.walidacja([rasa,0,1,int(input("Wprowadz wartosc %s: " % cecha))])
+            while wartosc==None:
+                if  rasa==0 and cecha=="mechanika":
+                    wartosc = Walidatory.walidacja([rasa, 1, 0, int(input("Wprowadz wartosc %s: " % cecha))])
+                else:wartosc = Walidatory.walidacja([rasa,0,1,int(input("Wprowadz wartosc %s: " % cecha))])
             rcpkzmas[cecha]=wartosc
 #  DOPISAC ZABEZPIECZENIE PRZED BLEDEM  WALIDACJI
 
