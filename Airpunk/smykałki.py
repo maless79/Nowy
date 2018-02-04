@@ -2,7 +2,7 @@
 
 
 def smykalki_lista():
-
+ 
     smykalki  = {
         "As  przestworzy" : 0,
         "Geniusz"  :0,
