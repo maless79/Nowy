@@ -2,6 +2,9 @@
 import Logi
 import Airpunk_Cechy
 import Walidatory
+
+#print(smykałki.smykalki_lista()) -  pobieram  listę smykałek
+
 finish=1  # zmienna odpowiada za ponowne  losowanie postaci, ponowne wywolanie  wyboru ras
 while (finish==1):
     sprawdzacz=0
