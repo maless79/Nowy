@@ -16,11 +16,11 @@ while(sprawdzacz<=1):
     else:
         Logi.logowanie_zdarzen("Wpisałeś niedozwolony znak.")
 if rasa_postaci==0:
-    Logi.logowanie_zdarzen(Airpunk_Cechy.cechy_postaci(0))
+    Airpunk_Cechy.cechy_postaci(0)
 elif rasa_postaci==1:
-    Logi.logowanie_zdarzen(Airpunk_Cechy.cechy_postaci(1))
+    Airpunk_Cechy.cechy_postaci(1)
 elif rasa_postaci==2:
-    Logi.logowanie_zdarzen(Airpunk_Cechy.cechy_postaci(2))
+    Airpunk_Cechy.cechy_postaci(2)
 else:
     Logi.logowanie_zdarzen("Nieoczekiwany błąd rasy. Prawdopodobnie źle wybrano rasę postaci.")
 Logi.logowanie_zdarzen("EXIT")

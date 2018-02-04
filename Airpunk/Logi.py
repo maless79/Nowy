@@ -10,5 +10,5 @@ def logowanie_zdarzen(do_logu=""):
     else:
         airpunklog.write(str(datetime.datetime.now()) + " " + do_logu)
     airpunklog.close()
-    print(do_logu)
+    #print(do_logu)# To jest  linia odpowiedzialna za dodatkowe wyświetlanie logu na konsolę- zacommnetowanie jej spowoduje czysta konsole.
     return ("Zapisałem i wyprintowałem")
