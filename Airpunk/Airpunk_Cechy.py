@@ -5,7 +5,7 @@ def cechy_postaci(rasa=0):
     wynik ={}  #definiuje  wynik  ktory zwraca funkcja cechy_postaci  jako  slownik
     wynik["Suma PH"]=0  #  w pierwszej pozycji  słownika wstawiam  nazwe Suma_PH o wartosci 0
     losowo=int(input("Czy cechy sam podasz(0), czy wylosujesz(1)?:  ")) # czy  postać będzie losowana czy recznie  robiona.
-    print  ("\n"*20)
+    #print  ("\n"*20)
     if losowo==0: #poniżej jest generowanie postaci reczne
         rcpkzmas = {
             "refleks": 0,
@@ -76,6 +76,3 @@ def cechy_postaci(rasa=0):
         Logi.logowanie_zdarzen(wynik)
         print (wynik)
     return wynik
-
-
-
