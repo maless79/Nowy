@@ -23,13 +23,17 @@ def cechy_postaci(rasa=0):
             while wartosc==None:
                 if  rasa==0 and cecha=="mechanika":
                     wartosc = Walidatory.walidacja([rasa, 1, 0, int(input("Zweryfikuj wprowadzona wartosc %s: " % cecha))])
+                    Logi.logowanie_zdarzen("mechanika: %s" % rcpkzmas["mechanika"])
                 elif  rasa==1 and cecha=="refleks":
                     wartosc = Walidatory.walidacja([rasa, 1, 0, int(input("Zweryfikuj wprowadzona wartosc %s: " % cecha))])
+                    Logi.logowanie_zdarzen("refleks: %s" % rcpkzmas["refleks"])
                 elif  rasa==2 and cecha=="ciało":
                     wartosc = Walidatory.walidacja([rasa, 1, 0, int(input("Zweryfikuj wprowadzona wartosc %s: " % cecha))])
+                    Logi.logowanie_zdarzen("ciało: %s" % rcpkzmas["ciało"])
                 else:
                     wartosc = Walidatory.walidacja([rasa, 0, 1, int(input("Wprowadz wartosc %s: " % cecha))])
             rcpkzmas[cecha]=wartosc
+            Logi.logowanie_zdarzen("%s: %s" %(cecha, rcpkzmas[cecha]))
 #  DOPISAC ZABEZPIECZENIE PRZED BLEDEM  WALIDACJI
 
         wynik = {  #  przygotowuje to co zwraca  funkcja cechy_postaci
@@ -53,10 +57,13 @@ def cechy_postaci(rasa=0):
             }
             if rasa==0:
                 rcpkzmas["mechanika"] = Walidatory.walidacja([rasa, 1, 0,random.randint(1, 12)])
+                Logi.logowanie_zdarzen("mechanika: %s" %rcpkzmas["mechanika"])
             elif rasa==1:
                 rcpkzmas["refleks"] = Walidatory.walidacja([rasa,1, 0,random.randint(1, 12)])
+                Logi.logowanie_zdarzen("refleks: %s" %rcpkzmas["refleks"])
             elif rasa==2:
                 rcpkzmas["ciało"] = Walidatory.walidacja([rasa,1, 0,random.randint(1, 12)])
+                Logi.logowanie_zdarzen("ciało: %s" %rcpkzmas["ciało"])
             else:
                 rcpkzmas={
                     "refleks":0,
