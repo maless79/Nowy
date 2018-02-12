@@ -55,6 +55,7 @@ def cechy_postaci(rasa=0):
                 "akcja":random.randint(1, 10),
                 "sterowanie":random.randint(1, 10),
             }
+            Logi.logowanie_zdarzen("Wygenerowano nastepujace cechy:  %s" %rcpkzmas)
             if rasa==0:
                 rcpkzmas["mechanika"] = Walidatory.walidacja([rasa, 1, 0,random.randint(1, 12)])
                 Logi.logowanie_zdarzen("mechanika: %s" %rcpkzmas["mechanika"])

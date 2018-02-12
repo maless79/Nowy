@@ -5,9 +5,7 @@ import Walidatory
 import smykałki
 
 wybor=smykałki.smykalki_lista()
-print  (wybor)
-
-
+print(wybor[2])
 
 finish=1  # zmienna odpowiada za ponowne  losowanie postaci, ponowne wywolanie  wyboru ras
 while (finish==1):
