@@ -1,9 +1,9 @@
 import Logi
 
-def smykalki_lista():
+def smykalki_lista(opis_smykalek_tak_nie):
 
     smykalki  = {
-        "1":["As  przestworzy", "+3 sterowanie, +3  samoloty", "Postać ma wyjątkową smykałkę do latania samolotami i innymi statkami powietrznymi. Instynktownie wyczuwa odległość, wiatry oraz ich kierunek i siłę, wysokość, na której się znajduje jak i świetnie panuje nad maszyną. Postać z taką smykałką otrzymuje  modyfikator +3 do sterowania oraz +3 do umiejętności samoloty (nawet, jeśli postać nie posiada tej umiejętności). \n"],
+        "1":["As  przestworzy", "+3 sterowanie, +3  samoloty", "Postać ma wyjątkową smykałkę do latania samolotami i innymi statkami powietrznymi. Instynktownie wyczuwa odległość, wiatry oraz ich kierunek i siłę, wysokość, na której się znajduje jak i świetnie panuje nad maszyną. Postać z taką smykałką otrzymuje  modyfikator +3 do sterowania oraz +3 do umiejętności samoloty (nawet, jeśli postać nie posiada tej umiejętności)."],
         "2":["Geniusz", "+6  mechanika", "Postać jest wybitnie inteligentna. Potrafi z niezwykłą wnikliwością analizować fakty i skutecznie budować związki przyczynowo skutkowe. Zazwyczaj też potrafi szybko i trzeźwo ocenić sytuację, nawet w warunkach dużego napięcia. Postać otrzymuje na stałe modyfikator +6 do testów opartych na Mechanice."],
         "3":["Kasiarz", "+6 otwieranie,  15 automatycznie zdaje", "Od najmłodszych lat postać rozumiała i umiała otwierać wszelkie zamki, stacyjki, blokady. Przy pomocy swojego kompletu różnorodnych wytrychów, uniwersalnych kluczy i kabli jest wstanie otworzyć niemal każdy zamek, uruchomić każdy silnik, oraz bez huku otworzyć każdy sejf. Postać zdaje automatycznie testy na poziomie 15 i niższym otwierania  oraz dostaje modyfikator +6 do testów umiejętności Otwieranie."],
         "4":["Kontakty", "+6 kontakty", "Postać posiada wrodzony talent do poznawania i zjednywania sobie ludzi, co zaowocowało wieloma bardzo intratnymi znajomościami. Postać zawsze ma, do kogo się zgłosić w kłopocie, znajdzie osobę, która chętnie kupi lub sprzeda nietypowy towar, albo zorganizuje potrzebne osoby do wyprawy, czy napadu. Postać posiada modyfikator do  umiejętności kontakty na poziomie +6 (nawet, jeśli postać nie posiada tej umiejętności)."],
@@ -11,16 +11,19 @@ def smykalki_lista():
         "6":["Medyk", "+6  medycyna", "Postać od dziecka instynktownie umiała opatrywać rany, nastawiać złamanekończyny, a nawet szybko nauczyła się odbierać porody, zwierząt i ludzi. Z łatwością też wyszukiwała zioła, czy nawet odkrywała ich nowe zastosowanie. Wszystkie te doświadczenia spowodowały, iż nawet bez ukończonych studiów lekarskich jest wstanie pomóc rannym i potrzebującym, co często czyni z niej szczególnie cenny nabytek w zespole. Postać otrzymuje modyfikator do umiejętności medycyna na poziomie +6 (nawet, jeśli postać nie posiada tej umiejętności)."],
         "7":["Nerwy  z neotynium", "+6 odpornośc na stres", "Postać urodziła się z jakimś brakiem lub nadmiarem połączeń nerwowych, co objawia się niemal całkowitą niewrażliwością postaci na stres, odpornością na najkoszmarniejsze sceny czy zwykłym brakiem strachu niemal przed czymkolwiek. Postać otrzymuje modyfikator +6 do testów odporności na stres, nawet, jeśli nie posiada tej umiejętności."],
         "8":["Paker", "+3 ciało, +3 MS", "Postać czy to na skutek lat ciężkich treningów czy ciężkiej fizycznej pracy ma bardzo dobrze rozwinięte mięśnie. Jej siła jest zdecydowanie większa niż przeciętnego  przedstawiciela jej gatunku. Postać może podwyższyć MS o 3. Oraz uzyskuje modyfikator +3 do C."],
-        "9":["Rewolwerowiec", "BONUS", "OPIS"],
-        "10":["Strzelec wyborowy", "BONUS", "OPIS"],
-        "11":["Sokole  oko", "BONUS", "OPIS"],
-        "12":["Swobodne spadanie", "BONUS", "OPIS"],
-        "13":["Sztuki walki", "BONUS", "OPIS"],
-        "14":["Zmysł walki", "BONUS", "OPIS"],
+        "9":["Rewolwerowiec", "+6  Pistolety", "Postać od najmłodszych lat posługiwała się sprawnie krótką bronią palną, jej celność z tego rodzaju broni znacznie przewyższała umiejętności innych. Postać otrzymuje modyfikator +6 do umiejętności Pistolety, nawet, jeśli jej nie posiada"],
+        "10":["Strzelec wyborowy", "+6  karabiny", "Postać na skutek nabytego doświadczenia lub wrodzonego talentu ma niezwykłe wyczucie i talent do oddawania celnych i strzałów z karabinów. Postać otrzymuje modyfikator +6 do umiejętności karabiny, nawet, jeśli jej nie posiada."],
+        "11":["Sokole  oko", "+3  Uniki, +3 akcja", "Postać jest szczególnie bystra. Posiada niemal nadnaturalny zmysł do obserwacji  otoczenia. Postać otrzymuje modyfikator +3 do umiejętności unik, nawet, jeśli jej nie posiada oraz +3 do Akcji."],
+        "12":["Swobodne spadanie", "+2  Abordaż, +2 Uniki, +2 Akrobatyka", "Umiejętność poruszania się pomiędzy samolotami, wspinaczki i kierowania lotem lub opadaniem tak, aby celnie i bezpiecznie dokonać abordażu na inny statek powietrzny.  Smykałka ta daje modyfikator do umiejętności: abordaż, akrobatyka oraz unik na poziomie  +2 (nawet, jeśli postać nie posiada tych umiejętności)"],
+        "13":["Sztuki walki", "+6 Walki wręcz", "Postać miała okazję i skrzętnie z niej skorzystała, aby nauczyć się konkretnego stylu  walki wręcz lub bronią białą. Postać otrzymuje modyfikator + 6 do testów walki wręcz oraz wybranej broni białej (nawet, jeśli postać nie posiada tych umiejętności)."],
+        "14":["Zmysł walki", "+6 TESTA", "Smykałka ta jest wrodzonym talentem postaci do walki. Postać zdecydowanie sprawniej i szybciej reaguje podczas starcia na szybko zmieniającą się sytuację. Postać  dostaje modyfikator na poziomie +6 do każdego TESTA."],
         }
     Logi.logowanie_zdarzen(smykalki)
+
     for nr_smykalki in smykalki:   # genruje ladnie  wyglądającą listę smykałek do obejrzenia na ekranie
-        print ("Smykałka  nr  %s: %s" %(nr_smykalki, smykalki[str(nr_smykalki)]) + "\n")
+        if opis_smykalek_tak_nie=="1":
+            print ("Smykałka  nr  %s: %s" %(nr_smykalki, smykalki[str(nr_smykalki)]) + "\n")
+
     while (int(nr_smykalki)>=14):
         try:
             nr_smykalki=int(input("Wybieram smykałkę  nr: "))  # każe userowi wybrać właściwą smykałkę dla  niego

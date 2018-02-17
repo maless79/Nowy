@@ -4,8 +4,14 @@ import Airpunk_Cechy
 import Walidatory
 import smykałki
 
-wybor=smykałki.smykalki_lista()
-print(wybor[2])
+opis_smykalek_tak_nie=input ("Czy chcesz zobaczyć opisy smykałek? 1-Tak, 0-Nie  ")
+wybor=smykałki.smykalki_lista(opis_smykalek_tak_nie)
+
+print(wybor[2]  + "\n"
+
+
+
+      )
 
 finish=1  # zmienna odpowiada za ponowne  losowanie postaci, ponowne wywolanie  wyboru ras
 while (finish==1):
